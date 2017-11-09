@@ -1,0 +1,6 @@
+name: Knockback-Clan-Stats
+version: 1.0-SNAPSHOT
+author: Simonsator
+depends: [Clans]
+main: de.simonsator.partyandfriends.clan.extensions.stats.knockback.KBPlugin
+description: Adds the stats of Knockback to clans
