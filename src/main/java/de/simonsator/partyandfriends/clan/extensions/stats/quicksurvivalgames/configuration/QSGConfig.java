@@ -1,13 +1,14 @@
-package de.simonsator.partyandfriends.clan.extensions.stats.knockback.configuration;
+package de.simonsator.partyandfriends.clan.extensions.stats.quicksurvivalgames.configuration;
 
+import de.simonsator.partyandfriends.api.PAFExtension;
 import de.simonsator.partyandfriends.utilities.ConfigurationCreator;
 
 import java.io.File;
 import java.io.IOException;
 
-public class KBConfig extends ConfigurationCreator {
-	public KBConfig(File file) throws IOException {
-		super(file);
+public class QSGConfig extends ConfigurationCreator {
+	public QSGConfig(File file, PAFExtension pPlugin) throws IOException {
+		super(file, pPlugin);
 		readFile();
 		loadDefaultValues();
 		saveFile();
@@ -21,7 +22,4 @@ public class KBConfig extends ConfigurationCreator {
 		set("database.password", "password");
 	}
 
-	public void reloadConfiguration() throws IOException {
-		configuration = (new KBConfig(FILE)).getCreatedConfiguration();
-	}
 }
